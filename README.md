@@ -5,4 +5,4 @@ People have been struggling with remembering when to water their plants and how 
 # Users:
 People who want to be successful at planting
 # MVP description:
-A minimal viable product would be an interface that the user can input the frequency for watering for a single plant and the app reminds the user when to water based on the input frequency.
+A minimal viable product would be an interface that the user can input the frequency for watering for a single plant and the app reminds the user when to water based on the input frequency. This is a MVP because the first goal of this project is to remind people to water their plants in order to be better at planting. 
