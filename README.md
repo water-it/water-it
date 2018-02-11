@@ -7,7 +7,7 @@ People who want to be successful at planting
 # MVP description:
 A minimal viable product would be an interface that the user can input the frequency for watering for a single plant and the app reminds the user when to water based on the input frequency. This is a MVP because the first goal of this project is to remind people to water their plants in order to be better at planting. 
 # Functionality
-In this app, it will remind you to water  the frequency to water your different plants. You will be able to add the name of your plants, add picture of plants as their profile pictures and set the frequencies. Also, you can view the plants that you need to water based on frequency. So, you will never forget when have you watered a specific plant.
+In this app, it will remind you to water based on the frequency of your different plants. You will be able to add the name of your plants, add picture of plants as their profile pictures and set the frequencies. Also, you can view the plants that you need to water based on frequency. So, you will never forget when have you watered a specific plant.
 # Installation Step
 Ruby Version: 2.4.1
 
