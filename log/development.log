@@ -1,0 +1,2414 @@
+Started GET "/" for 127.0.0.1 at 2018-02-08 23:13:28 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/charleentan/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/charleentan/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.5ms)
+Completed 200 OK in 249ms (Views: 14.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20180210194322)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "plant_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_plants_on_plant_id" ON "plants" ("plant_id")[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210194322"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFrequencies (20180210194349)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "timesPerWeek" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210194349"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-10 20:23:31.976536"], ["updated_at", "2018-02-10 20:23:31.976536"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:19:13 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/charleentan/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/charleentan/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:29:46 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:30:57 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 544ms (Views: 532.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:32:18 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 247ms (Views: 235.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:32:27 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:33:03 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 229ms (Views: 217.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:35:49 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 228ms (Views: 216.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:38:50 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PlantController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:39:24 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 285ms (Views: 272.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:43:00 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4:     <div class="cards row">
+    5:     
+    6: 
+    7:       <% @plants.each do |t| %>
+    8:       <div class="card col-xs-4">
+    9:         <%= image_tag t.image %>
+   10:         <h2><%= t.name %></h2>
+  
+app/views/plants/index.html.erb:7:in `_app_views_plants_index_html_erb__680339551955440723_70203981514460'
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:44:28 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 238ms (Views: 216.5ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:52:19 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 259ms (Views: 243.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 14:52:56 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 223ms (Views: 208.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 15:04:12 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 247ms (Views: 231.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 15:08:09 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (190.4ms)
+Completed 200 OK in 239ms (Views: 223.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 15:20:31 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (176.0ms)
+Completed 200 OK in 242ms (Views: 224.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 15:20:39 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/index" for 127.0.0.1 at 2018-02-10 15:23:36 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (176.3ms)
+Completed 200 OK in 225ms (Views: 208.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 15:23:44 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/index" for 127.0.0.1 at 2018-02-10 15:23:50 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/index" for 127.0.0.1 at 2018-02-10 15:25:53 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (179.1ms)
+Completed 200 OK in 232ms (Views: 217.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 15:25:57 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 15:27:14 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 233ms (Views: 222.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+[0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 15:51:08 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"plants"}, missing required keys: [:id]):
+    1: 
+    2: <h1>New Plant</h1>
+    3: <%= form_with scope: :plant, url: plant_path, local: true do |form| %>
+    4:   <p>
+    5:     <%= form.label :name %><br>
+    6:     <%= form.text_field :name %>
+  
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___598859586960934590_70113107557620'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 15:53:22 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 283ms (Views: 269.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-10 16:17:22 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (201.5ms)
+Completed 200 OK in 255ms (Views: 231.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:17:27 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"plants"}, missing required keys: [:id]):
+    1: 
+    2: <h1>New Plant</h1>
+    3: <%= form_with scope: :plant, url: plant_path, local: true do |form| %>
+    4:   <p>
+    5:     <%= form.label :name %><br>
+    6:     <%= form.text_field :name %>
+  
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___2958382741726498800_70310825055940'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:17:54 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 239ms (Views: 228.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-02-10 16:18:01 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:19:38 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 241ms (Views: 227.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-02-10 16:19:54 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:23:05 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 237ms (Views: 226.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-02-10 16:23:10 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:25:08 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"plants"}, missing required keys: [:id]):
+    1: 
+    2: <h1>New Plant</h1>
+    3: <%= form_with scope: :plant, url: plant_path, local: true do |form| %>
+    4:   <p>
+    5:     <%= form.label :name %><br>
+    6:     <%= form.text_field :name %>
+  
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb__4043706388306216673_70119923502840'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:30:24 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"plants"}, missing required keys: [:id]):
+    1: 
+    2: <h1>New Plant</h1>
+    3: <%= form_with scope: :plant, url: plant_path, local: true do |form| %>
+    4:   <p>
+    5:     <%= form.label :name %><br>
+    6:     <%= form.text_field :name %>
+  
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___4085450749150784683_70303542756580'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:50:14 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"plants"}, missing required keys: [:id]):
+    1: 
+    2: <h1>New Plant</h1>
+    3: <%= form_with scope: :plant, url: plant_path, local: true do |form| %>
+    4:   <p>
+    5:     <%= form.label :name %><br>
+    6:     <%= form.text_field :name %>
+  
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb__1800774149590560289_70202267985980'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:51:15 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 283ms (Views: 263.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:51:24 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+RDlLWLW1QHnQXy1qjJvaSKWLty9QxLn5a4BkO7kcbz8itTDC/fpfL6WgfRpcjzXCJcFi8ghhV3ezcl2mmJPMA==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 16:53:12 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (177.9ms)
+Completed 200 OK in 231ms (Views: 214.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:53:18 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:53:24 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdElpJ6CB4sWNuYwVSK3j55hJ3dIUxysQKaNif2Ncxt0SxRK96M79k/hG3GWYuQxtGAMID0xixZ7xUVviQtNlw==", "plant"=>{"name"=>"hi", "frequency"=>"1"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `plants_params' for #<PlantsController:0x007fea67e15240>
+Did you mean?  plant_params
+               plants_path):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 16:54:04 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (168.4ms)
+Completed 200 OK in 217ms (Views: 201.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:54:07 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 65ms (Views: 55.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:54:13 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m5QeB2y2BpbFhaZDVSGDvdZj8l2mo/s7CBCz9+IgQkKeDi/pBZc665xSWwKWYdAD/GLZCtPBbIEzc3sRlqZ8zg==", "plant"=>{"name"=>"hi", "frequency"=>"1"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70122029626440) expected, got "1" which is an instance of String(#70121976921880)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 16:54:22 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:54:24 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:54:37 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YgQdlY7As1r0/p0brUkdj6caiiqaoahga35mZw8Qxu9nnix75+GPJ60pYFpuCU4xjRuhfe/DP9pQHa6Be5b4Yw==", "plant"=>{"name"=>"plant1", "frequency"=>"twice a week"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70122029626440) expected, got "twice a week" which is an instance of String(#70121976921880)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 16:54:54 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:54:56 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:55:01 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3mxyJOHBqSVt8JVHcq3BTCcxv9Ui8Ci4Ic9nlAc599Xb9kPKiOCVWDQnaAax7ZLyDTCUgleSvwIarK9yc7/JWQ==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70122029626440) expected, got "hi" which is an instance of String(#70121976921880)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 16:55:56 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 265ms (Views: 242.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 16:56:03 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mo7Qt1TrGsCO3Z8mwo0ZOe1Cynyi7Jvmw1rIYwfZCOSfFOFZPcomvdcKYmcBzUqHx0PhK9eODFz4OQCFc182aA==", "plant"=>{"name"=>"plant1", "frequency"=>"plant"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70263717249680) expected, got "plant" which is an instance of String(#70263702306600)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 17:03:57 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (183.1ms)
+Completed 200 OK in 232ms (Views: 218.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 17:04:00 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 53ms (Views: 42.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 17:04:05 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/gWOs/VfEp8DwxyyIhtmSQ91bGLNnaHd8Tl7nVG9PfH7n79dnH4u4loU4fPhWzX3JXRHNbj/NmfKWrN7JTsDfQ==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70220161377000) expected, got "hi" which is an instance of String(#70220090089240)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-10 17:23:40 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (211.5ms)
+Completed 200 OK in 270ms (Views: 252.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 17:23:46 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 60ms (Views: 49.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-10 17:23:54 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"341kvRtwpsNuIkB5Mq7P9aNWja2Rnnj7vdWXQBZ11GnaF1VTclGavjf1vTjx7pxLiVem+uT870GGtl+mYvPq5Q==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Create Plant"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70259615563380) expected, got "hi" which is an instance of String(#70259617201960)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-10 17:30:51 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_field :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb___456340619848173497_70162511947440'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___456340619848173497_70162511947440'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:36:43 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (31.1ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_field :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb___1197057417176568873_70339679488720'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___1197057417176568873_70339679488720'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:36:46 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_field :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb___1197057417176568873_70339681015960'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___1197057417176568873_70339681015960'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:36:58 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (25.8ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_field :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb__3605146278569253460_70310727069680'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb__3605146278569253460_70310727069680'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_plant_id' AND type='index'
+[0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:41:36 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (26.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_field :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb__1763503896575653702_70316425320020'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb__1763503896575653702_70316425320020'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:43:57 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (38.8ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_area :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb___3814759407403938852_70118946553480'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___3814759407403938852_70118946553480'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:45:24 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 270ms (Views: 249.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:45:57 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_area :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb___2792906951467874883_70206981725060'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb___2792906951467874883_70206981725060'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:46:36 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     7:   </p>
+     8:     <p>
+     9:     <%= form.label :frequency %><br>
+    10:     <%= form.text_area :frequency %>
+    11:   </p>
+    12:   <p>
+    13:     <%= form.submit %>
+  
+app/views/plants/new.html.erb:10:in `block in _app_views_plants_new_html_erb__1218478987731487118_70104284079180'
+app/views/plants/new.html.erb:3:in `_app_views_plants_new_html_erb__1218478987731487118_70104284079180'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:47:00 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 246ms (Views: 223.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:47:23 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 249ms (Views: 225.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-02-11 11:47:30 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:49:25 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 261ms (Views: 238.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 11:49:29 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cA8MI4KApN3LlTLRpqT8ydhEFq6fgIvnMFLK/dPTJLcWg3e5ys+7i75qYqF2sBNDWA7Dc8clZWnooPNg8lyHg==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 19:49:29.282557"], ["updated_at", "2018-02-11 19:49:29.282557"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 11:49:29 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:3: syntax error, unexpected ')', expecting '('
+tput_buffer.append=( @plant. );@output_buffer.safe_append='
+                              ^
+/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/plants/show.html.erb:3: syntax error, unexpected ')', expecting '('
+app/views/plants/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/plants/show.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 11:50:00 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency %>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__2599787334298473337_70356407101820'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:50:10 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 215ms (Views: 211.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 11:50:13 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"75dQirNvg29rljfcSuenwZiIRdbyHGdpV3qkmgjND8TqDWFk2k6/EjJByp2Jp/R/solugYd+8NNsGWx8fEsxSA==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 19:50:13.524239"], ["updated_at", "2018-02-11 19:50:13.524239"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 11:50:13 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency %>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__2599787334298473337_70356469761340'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:50:28 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 243ms (Views: 222.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 11:50:32 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lI/jfE3jRYTisFXsePAGh0F+/Lpaai+zT4jwZZhGTBKRFdKSJMJ5+btnqK27sFU5a3/X7S8IuAl06ziD7MByng==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 19:50:32.572343"], ["updated_at", "2018-02-11 19:50:32.572343"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/3
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/plants/3" for 127.0.0.1 at 2018-02-11 11:50:32 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `Frequency' for #<Plant:0x007f91d45ff9c0>
+Did you mean?  frequency=):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.Frequency %>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___3612636258935067013_70132126750960'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:50:54 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 252ms (Views: 229.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 11:50:57 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZQHhHIT9+xhKf7fXitzVtpfCPBnIzSYHTtXVRrcPoK5gm9Dy7dzHZROoSpZJnIYIvcMXTr2vsb11th2gw4meIg==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 19:50:57.515794"], ["updated_at", "2018-02-11 19:50:57.515794"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/4
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/plants/4" for 127.0.0.1 at 2018-02-11 11:50:57 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:8: syntax error, unexpected ')'
+r.append=( @plant.frequency= );@output_buffer.safe_append='
+                              ^
+/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/charleentan/Documents/2018 Spring/CSCI121/water-it/water-it/app/views/plants/show.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/plants/show.html.erb:8: syntax error, unexpected ')'
+app/views/plants/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/plants/show.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:51:19 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 247ms (Views: 227.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 11:51:22 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IfkzMyN/I9YA/JexClUjg1zZUnna7r1welPxHLx/zZUkYwLdSl4fq1kravDJFXA9dth5Lq+MKspBMDn6yPnzGQ==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 19:51:22.882978"], ["updated_at", "2018-02-11 19:51:22.882978"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/5
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/plants/5" for 127.0.0.1 at 2018-02-11 11:51:22 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__3568923603179820719_70098765501920'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 11:52:54 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 245ms (Views: 221.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 11:53:00 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p>
+    2:   <strong>Name:</strong>
+    3:   <%= @plants.name%>
+    4: </p>
+    5:  
+    6: <p>
+  
+app/views/plants/show.html.erb:3:in `_app_views_plants_show_html_erb___2734108305294917583_70155638973140'
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 11:53:19 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `frequency' for nil:NilClass):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plants.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___3796599229948216309_70240572573060'
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 11:56:24 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `config' for ApplicationRecord(abstract):Class
+Did you mean?  concerning):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/plant.rb:1:in `<top (required)>'
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 11:57:24 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plant::Frequency):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__1848460789374104953_70189674483320'
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 12:00:10 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plant" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20180210194322)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "frequency" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210194322"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plant" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180211195933"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-11 20:04:30.159697"], ["updated_at", "2018-02-11 20:04:30.159697"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants//1" for 127.0.0.1 at 2018-02-11 12:04:51 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=1):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:05:03 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 234ms (Views: 225.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:05:06 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gy0cJmhE3eXxd7mHG+vlwlZEienSQTzNt4lN+T1X9Eoety3IAWXhmKigRMbYq7Z8fEWivqcjq3eM6oUfSdHKxg==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:05:06.793888"], ["updated_at", "2018-02-11 20:05:06.793888"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:05:06 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.4ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 1], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___2357750430648846660_70290257580820'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:11:02 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 240ms (Views: 221.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plants/index" for 127.0.0.1 at 2018-02-11 12:11:08 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/show" for 127.0.0.1 at 2018-02-11 12:11:14 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=show):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 12:15:57 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (188.0ms)
+Completed 200 OK in 238ms (Views: 221.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:16:00 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 49ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:16:08 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZtjiSDtaawUj5wsHAeT4a994x3qQbqMlE8/XiYg5VjdjQtOmUntXeHow9kbCpKvV9XnsLeUMNJ8orB9v/L9ouw==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:16:08.980031"], ["updated_at", "2018-02-11 20:16:08.980031"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 12:16:08 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.4ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 2], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (20.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency %>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___1252199624259392821_70101034683720'
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:16:49 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.3ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 1], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___3902011595254809056_70359678157700'
+Started GET "/plants/show" for 127.0.0.1 at 2018-02-11 12:16:54 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=show):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:17:03 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 211ms (Views: 207.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:17:07 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2CeiHtlrFvETnarvo5KdhgaAzao6SwJD9STNfF3YhZXdvZPwsEoqjEpKV65g0s44LIHm/U8plfnORwWaKV67GQ==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:17:07.036007"], ["updated_at", "2018-02-11 20:17:07.036007"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/3
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/3" for 127.0.0.1 at 2018-02-11 12:17:07 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.4ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 3], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___3902011595254809056_70359688554720'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:17:39 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 252ms (Views: 231.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:17:42 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYpcjf5GeKKl7MgPS8m2kvejq8xOACOB5kRFZBzl6/9kEG1jl2dE3/w7NU6IieUs3aKAmztitDvdJ42CaGPVcw==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:17:42.635076"], ["updated_at", "2018-02-11 20:17:42.635076"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/4
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/plants/4" for 127.0.0.1 at 2018-02-11 12:17:42 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Frequency::PlantId):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___3178891776162120426_70137195746320'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:18:35 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 253ms (Views: 231.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:18:39 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wTeiYa+I6rjGePHmCvCXi+XWYyIinvIAqMbwJ9G/Tu3ErZOPxqnWxZ+vDKfJsMQ1z9dIdVf8ZbqTpTjBpTlwYQ==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:18:39.194901"], ["updated_at", "2018-02-11 20:18:39.194901"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/5
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/5" for 127.0.0.1 at 2018-02-11 12:18:39 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (21.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Frequency::PlantId):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__1583430108281032775_70315594027100'
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 12:18:58 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (178.4ms)
+Completed 200 OK in 228ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:19:01 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 48ms (Views: 36.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:19:05 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MDudCZ9do/o2MfS/jOeU2Lh0lZ9AQnTdBdnhQO2/5rA1oazn9nyfh2/mCf5Pp8dmknW+yDUg42c+uimmmTnYPA==", "plant"=>{"name"=>"1", "Frequency"=>"2"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "1"], ["created_at", "2018-02-11 20:19:05.619373"], ["updated_at", "2018-02-11 20:19:05.619373"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/6
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/plants/6" for 127.0.0.1 at 2018-02-11 12:19:05 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Frequency::PlantId):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__899550239566309411_70178125089540'
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 12:20:49 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (187.9ms)
+Completed 200 OK in 240ms (Views: 222.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:20:53 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.6ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 1], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___556361816480736385_70122566556140'
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 12:20:59 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.6ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 2], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___556361816480736385_70122572946100'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:22:36 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:22:40 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+V1qGie1+1TJltvYEA8y1712FkUM26nWyaT/kWWjro/8x1v0TpTHKZBBJpnTT2Fpl3c9Enm5Pmzyxzd3ESWQAw==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:22:40.366858"], ["updated_at", "2018-02-11 20:22:40.366858"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/7
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/plants/7" for 127.0.0.1 at 2018-02-11 12:22:40 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.4ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 7], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___556361816480736385_70122520956160'
+Started GET "/plants/index" for 127.0.0.1 at 2018-02-11 12:22:47 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:22:55 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/show" for 127.0.0.1 at 2018-02-11 12:23:00 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=show):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:23:20 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.6ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 1], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb___556361816480736385_70122523863120'
+Started POST "/__web_console/repl_sessions/8314818e45634f63f2722fa358a0e5b1/trace" for 127.0.0.1 at 2018-02-11 12:23:51 -0800
+Started POST "/__web_console/repl_sessions/8314818e45634f63f2722fa358a0e5b1/trace" for 127.0.0.1 at 2018-02-11 12:23:55 -0800
+Started POST "/__web_console/repl_sessions/8314818e45634f63f2722fa358a0e5b1/trace" for 127.0.0.1 at 2018-02-11 12:23:56 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:24:30 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 253ms (Views: 231.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:24:33 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kSgeGKtp8pCQZwX+igPo66x8BWAR/S/mK2hvg+YEceSUsi/2wkjO7cmw+L9JQ7tVhn0uN2SfuFwQC6dlkoJPaA==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:24:33.607990"], ["updated_at", "2018-02-11 20:24:33.607990"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/8
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/plants/8" for 127.0.0.1 at 2018-02-11 12:24:33 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.4ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", 8], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: frequencies.plant_id: SELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?):
+     5:  
+     6: <p>
+     7:   <strong>Frequency:</strong>
+     8:   <%= @plant.frequency%>
+     9: </p>
+    10: <%= link_to 'Plant', plants_path %>
+  
+app/views/plants/show.html.erb:8:in `_app_views_plants_show_html_erb__2059666127151938541_70246209033280'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20180210194322)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "frequency" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210194322"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plant_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180211195933"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-11 20:24:58.441105"], ["updated_at", "2018-02-11 20:24:58.441105"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:25:09 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 237ms (Views: 216.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:25:14 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PN8398lGCCLbcT9gjYsLNmT8cUa4YcHyIqshnLy5NnY5RQYZoGc0X4KmwiFOy1iITv1aEc0DVkgZyOl6yD8I+g==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:25:14.060852"], ["updated_at", "2018-02-11 20:25:14.060852"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:25:14 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "1"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 45ms (Views: 35.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 12:25:21 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:25:35 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "1"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 12:25:44 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:25:48 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:25:55 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DyDc7Yypx38LcEDYmxToLpjMWPcjtPOEdhr6ETmfmZAKuu0D5Yj7AlKnvZlYVLuQss1zoFbWZD5NeTL3TRmnHA==", "plant"=>{"name"=>"plant2", "Frequency"=>"2"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant2"], ["created_at", "2018-02-11 20:25:55.731970"], ["updated_at", "2018-02-11 20:25:55.731970"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 12:25:55 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "2"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 12:28:29 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "2"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 12:28:48 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:29:51 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "1"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:30:07 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "1"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:30:41 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 252ms (Views: 228.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:30:45 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rWHIW5wWpbk7mFg8TVBWMAW//LKY+IMr1/ZuZMp2HlCo+/m19TeZxGJPpX2OEAWOL77X5e2aFJHslaaCvvAg3A==", "plant"=>{"name"=>"plant1", "frequency"=>"3"}, "commit"=>"Save Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70106033503060) expected, got "3" which is an instance of String(#70106025991960)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 12:31:17 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (187.7ms)
+Completed 200 OK in 236ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:31:20 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 50ms (Views: 39.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:31:24 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2/ONomywosZEvGbKE03r7WlyuPKWqDSiQOm93rQi21u9f/Y4JP+9kDFDNrrDWQRn6ThtL84N2iyYG4RDla14Q==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:31:24.940255"], ["updated_at", "2018-02-11 20:31:24.940255"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/3
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/3" for 127.0.0.1 at 2018-02-11 12:31:24 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.1ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "3"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 44ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-02-11 12:39:23 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:39:32 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2/ONomywosZEvGbKE03r7WlyuPKWqDSiQOm93rQi21u9f/Y4JP+9kDFDNrrDWQRn6ThtL84N2iyYG4RDla14Q==", "plant"=>{"name"=>"plant1", "Frequency"=>"pl"}, "commit"=>"Save Plant"}
+Unpermitted parameter: :Frequency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "plant1"], ["created_at", "2018-02-11 20:39:32.218592"], ["updated_at", "2018-02-11 20:39:32.218592"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/4
+Completed 302 Found in 18ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/plants/4" for 127.0.0.1 at 2018-02-11 12:39:32 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.2ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "4"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 184ms (Views: 177.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:39:47 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 278ms (Views: 255.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:39:51 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s448OXklFSdmHSn903TISXwbZpWyY/N8BmZYX1uzpQ+2FA3XEAQpWj/K1LwQNJv3VhpNwscBZMY9BZC5LzWbgw==", "plant"=>{"name"=>"plant1", "frequency"=>"3"}, "commit"=>"Save Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70262516851120) expected, got "3" which is an instance of String(#70262502833960)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:40:13 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/nwq" for 127.0.0.1 at 2018-02-11 12:40:13 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"nwq"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=nwq):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/3" for 127.0.0.1 at 2018-02-11 12:49:21 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  [1m[36mFrequency Load (0.2ms)[0m  [1m[34mSELECT  "frequencies".* FROM "frequencies" WHERE "frequencies"."plant_id" = ? LIMIT ?[0m  [["plant_id", "3"], ["LIMIT", 1]]
+  Rendered plants/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 252ms (Views: 225.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:49:26 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:49:32 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Tm7ZqCZZB8McDAoSrVhZf8yeeEGICJvUZrC1he5+Qr0o4qIybhYYlWnzWmJ9TLb1TNStnNCtdVq+QowYz/Hhg==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Save Plant"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Frequency(#70301662411380) expected, got "hi" which is an instance of String(#70301656719160)):
+  
+app/controllers/plants_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20180210194322)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "frequency" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210194322"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFrequencies (20180211195933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "frequencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plant_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180211195933"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-11 20:52:07.808135"], ["updated_at", "2018-02-11 20:52:07.808135"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 12:52:14 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (177.3ms)
+Completed 200 OK in 228ms (Views: 215.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 12:52:16 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 49ms (Views: 37.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 12:52:20 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+0APHDPTu/7UOHKwHnpuhTjZzNVwO+O4cXLUh0aVbwz+2j7yWvKHg43vj/HdOj07EtjnggVZdAJKERxhMhNRgA==", "plant"=>{"name"=>"plant1", "frequency"=>"hi"}, "commit"=>"Save Plant"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "plant1"], ["frequency", "hi"], ["created_at", "2018-02-11 20:52:20.790919"], ["updated_at", "2018-02-11 20:52:20.790919"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:52:20 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 12:58:18 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (194.0ms)
+Completed 200 OK in 236ms (Views: 222.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 12:58:22 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 12:58:24 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 13:00:34 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (196.0ms)
+Completed 200 OK in 250ms (Views: 237.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 13:00:39 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 13:00:42 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t1sRCwBPXBBk2HUhUS5As6ZedXkif08WTzemEryuD15feVFa2GQ0mTm6J6XrdI4CQBX2BWZpDzEIA2lVPbeg0Q==", "plant"=>{"name"=>"plant1", "frequency"=>"3"}, "commit"=>"Save Plant"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "plant1"], ["frequency", "3"], ["created_at", "2018-02-11 21:00:42.705040"], ["updated_at", "2018-02-11 21:00:42.705040"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 13:00:42 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 13:00:43 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 13:00:47 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/2" for 127.0.0.1 at 2018-02-11 13:00:49 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 13:01:17 -0800
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for 127.0.0.1 at 2018-02-11 13:01:23 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GsgRulHtOL0EjcMngBMzlpcxsE6F5J1ltk5NhUHFwyHy6lHricZQNFnvkaM6Sf0ncXozMsHy3ULxeoLCwNxsrg==", "plant"=>{"name"=>"hi", "frequency"=>"1"}, "commit"=>"Save Plant"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hi"], ["frequency", "1"], ["created_at", "2018-02-11 21:01:23.488144"], ["updated_at", "2018-02-11 21:01:23.488144"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/plants/3
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/plants/3" for 127.0.0.1 at 2018-02-11 13:01:23 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2018-02-11 13:01:40 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2018-02-11 13:01:52 -0800
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-02-11 15:01:07 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 265ms (Views: 244.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2018-02-11 15:01:10 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-11 15:01:14 -0800
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
