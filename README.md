@@ -9,6 +9,8 @@ A minimal viable product would be an interface that the user can input the frequ
 # Functionality
 In this app, it will remind you to water  the frequency to water your different plants. You will be able to add the name of your plants, add picture of plants as their profile pictures and set the frequencies. Also, you can view the plants that you need to water based on frequency. So, you will never forget when have you watered a specific plant.
 # Installation Step
+Ruby Version: 2.4.1
+Rails: 5.1.4
 Once you have cloned the project. You can run `bin/rails server` and go to "localhost:3000" in your browser to see the webpage. 
 # Issues
 One of the major issues is that the relationship between frequencies and plants are not established. The function, view plants based on frequencies, might fall short. Also, this app does not have the function to send notifications yet. 
